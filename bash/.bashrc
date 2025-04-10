@@ -35,3 +35,5 @@ eval "$(starship init bash)"
 
 #add cargo to path
 export PATH="/home/john/.cargo/bin:$PATH"
+
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
