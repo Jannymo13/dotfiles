@@ -32,6 +32,10 @@ export JAVA_HOME=$HOME/.jbang/currentjdk
 alias vim=nvim
 eval "$(starship init bash)"
 . "$HOME/.cargo/env"
+#alias vimdiff
+alias vimdiff='nvim -d'
 
 #add cargo to path
 export PATH="/home/john/.cargo/bin:$PATH"
+
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
