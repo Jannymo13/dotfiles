@@ -29,13 +29,22 @@ alias j!=jbang
 export PATH="$HOME/.jbang/bin:$HOME/.jbang/currentjdk/bin:$PATH"
 export JAVA_HOME=$HOME/.jbang/currentjdk
 
-alias vim=nvim
 eval "$(starship init bash)"
 . "$HOME/.cargo/env"
-#alias vimdiff
+
 alias vimdiff='nvim -d'
+alias vim=nvim
+alias anime=ani-cli
 
 #add cargo to path
 export PATH="/home/john/.cargo/bin:$PATH"
 
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+
+# pnpm
+export PNPM_HOME="/home/john/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
